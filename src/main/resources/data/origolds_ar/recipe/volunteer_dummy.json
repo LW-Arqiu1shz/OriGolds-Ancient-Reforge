@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {"item": "minecraft:target"},
+    {"item": "minecraft:armor_stand"}
+  ],
+  "result": {"id": "origolds_ar:volunteer_dummy", "count": 1}
+}

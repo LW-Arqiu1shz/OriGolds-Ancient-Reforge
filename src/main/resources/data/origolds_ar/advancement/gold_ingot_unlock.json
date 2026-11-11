@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:story/mine_stone",
+  "display": {
+    "icon": {
+      "id": "minecraft:gold_ingot"
+    },
+    "title": {
+      "translate": "advancements.origolds_ar.gold_ingot_unlock.title"
+    },
+    "description": {
+      "translate": "advancements.origolds_ar.gold_ingot_unlock.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "gold_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:gold_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "origolds_ar:origold_assembly_station",
+      "origolds_ar:broken_origold_parts",
+      "origolds_ar:trait_extraction",
+      "origolds_ar:trait_removal"
+    ]
+  }
+}

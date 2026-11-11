@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {"item": "origolds_ar:swiftness_rune"},
+    {"item": "origolds_ar:greed_rune"},
+    {"item": "origolds_ar:reaping_rune"},
+    {"item": "origolds_ar:siphon_rune"}
+  ],
+  "result": {"id": "origolds_ar:beast_rune", "count": 1}
+}

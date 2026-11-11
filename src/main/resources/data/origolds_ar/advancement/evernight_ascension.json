@@ -1,0 +1,15 @@
+{
+  "parent": "origolds_ar:shadows_approval",
+  "display": {
+    "icon": { "id": "origolds_ar:evernight_ascension_emblem" },
+    "title": { "translate": "advancements.origolds_ar.evernight_ascension.title" },
+    "description": { "translate": "advancements.origolds_ar.evernight_ascension.description" },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "evernight_emblem": { "trigger": "minecraft:inventory_changed", "conditions": { "items": [ { "items": "origolds_ar:evernight_ascension_emblem" } ] } }
+  }
+}

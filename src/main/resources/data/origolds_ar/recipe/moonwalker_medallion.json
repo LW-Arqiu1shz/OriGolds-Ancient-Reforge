@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": ["GEG", "EDE", "GEG"],
+  "key": {
+    "G": {"item": "minecraft:gold_block"},
+    "E": {"item": "minecraft:end_stone"},
+    "D": {"item": "minecraft:dragon_head"}
+  },
+  "result": {"id": "origolds_ar:moonwalker_medallion", "count": 1}
+}

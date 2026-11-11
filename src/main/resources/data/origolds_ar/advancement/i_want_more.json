@@ -1,0 +1,15 @@
+{
+  "parent": "origolds:origolds/root",
+  "display": {
+    "icon": { "id": "origolds_ar:greed_rune" },
+    "title": { "translate": "advancements.origolds_ar.i_want_more.title" },
+    "description": { "translate": "advancements.origolds_ar.i_want_more.description" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "greed_rune": { "trigger": "minecraft:inventory_changed", "conditions": { "items": [ { "items": "origolds_ar:greed_rune" } ] } }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["RDR", "DMD", "RDR"],
+  "key": {
+    "R": {"item": "minecraft:redstone"},
+    "D": {"item": "minecraft:diamond_block"},
+    "M": {"item": "origolds:magigold_core"}
+  },
+  "result": {"id": "origolds_ar:swiftness_rune", "count": 1}
+}

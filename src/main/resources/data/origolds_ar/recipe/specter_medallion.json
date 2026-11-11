@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["GSG", "SDS", "GSG"],
+  "key": {
+    "G": {"item": "minecraft:gold_block"},
+    "S": {"tag": "minecraft:soul_fire_base_blocks"},
+    "D": {"item": "minecraft:nether_star"}
+  },
+  "result": {"id": "origolds_ar:specter_medallion", "count": 1}
+}

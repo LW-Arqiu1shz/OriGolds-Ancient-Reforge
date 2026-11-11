@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["QDQ", "DMD", "QDQ"],
+  "key": {
+    "Q": {"item": "minecraft:quartz"},
+    "D": {"item": "minecraft:diamond_block"},
+    "M": {"item": "origolds:magigold_core"}
+  },
+  "result": {"id": "origolds_ar:reaping_rune", "count": 1}
+}

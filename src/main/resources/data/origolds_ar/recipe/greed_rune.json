@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["BDB", "DMD", "BDB"],
+  "key": {
+    "B": {"item": "minecraft:emerald"},
+    "D": {"item": "minecraft:diamond_block"},
+    "M": {"item": "origolds:magigold_core"}
+  },
+  "result": {"id": "origolds_ar:greed_rune", "count": 1}
+}

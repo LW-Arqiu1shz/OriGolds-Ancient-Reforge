@@ -1,0 +1,15 @@
+{
+  "parent": "origolds:origolds/root",
+  "display": {
+    "icon": { "id": "origolds_ar:reaping_rune" },
+    "title": { "translate": "advancements.origolds_ar.hunt_and_harvest.title" },
+    "description": { "translate": "advancements.origolds_ar.hunt_and_harvest.description" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "reaping_rune": { "trigger": "minecraft:inventory_changed", "conditions": { "items": [ { "items": "origolds_ar:reaping_rune" } ] } }
+  }
+}

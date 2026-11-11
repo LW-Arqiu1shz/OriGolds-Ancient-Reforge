@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "origolds_ar:item/origold_wireless_connector"
+  }
+}

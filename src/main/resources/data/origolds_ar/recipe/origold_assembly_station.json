@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " N ",
+    "DED",
+    "GSG"
+  ],
+  "key": {
+    "N": {
+      "item": "origolds:magigold_core"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "E": {
+      "item": "minecraft:enchanting_table"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "S": {
+      "item": "minecraft:smithing_table"
+    }
+  },
+  "result": {
+    "id": "origolds_ar:origold_assembly_station",
+    "count": 1
+  }
+}
