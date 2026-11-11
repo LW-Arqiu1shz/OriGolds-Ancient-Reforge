@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "F  ",
+    " M ",
+    "  C"
+  ],
+  "key": {
+    "F": "minecraft:fishing_rod",
+    "M": "origolds:magigold_core",
+    "C": "minecraft:crossbow"
+  },
+  "result": {
+    "id": "origolds_ar:grapnel_ballista",
+    "count": 1
+  }
+}

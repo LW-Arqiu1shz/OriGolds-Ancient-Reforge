@@ -1,0 +1,15 @@
+{
+  "parent": "origolds:origolds/root",
+  "display": {
+    "icon": { "id": "origolds_ar:siphon_rune" },
+    "title": { "translate": "advancements.origolds_ar.give_me_your_blood.title" },
+    "description": { "translate": "advancements.origolds_ar.give_me_your_blood.description" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "siphon_rune": { "trigger": "minecraft:inventory_changed", "conditions": { "items": [ { "items": "origolds_ar:siphon_rune" } ] } }
+  }
+}

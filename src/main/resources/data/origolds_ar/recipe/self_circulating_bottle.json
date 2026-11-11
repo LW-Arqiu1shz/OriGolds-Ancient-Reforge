@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:experience_bottle",
+    "origolds:magigold_core"
+  ],
+  "result": {"id": "origolds_ar:self_circulating_bottle", "count": 1}
+}

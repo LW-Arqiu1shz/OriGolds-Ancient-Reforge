@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "package": "cn.blockforge.generated.origoldsar.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "VirtualSignalMixin",
+    "StructureTemplateRadioMixin",
+    "LunarGravityMixin",
+    "DoubleGravityMixin",
+    "FallImmunityMixin",
+    "FallSpeedCapMixin"
+  ],
+  "client": [
+    "client.ModListScreenMixin",
+    "client.ModListEntryMixin",
+    "client.ModListSortMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

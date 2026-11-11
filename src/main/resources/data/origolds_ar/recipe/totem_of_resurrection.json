@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " A ",
+    "AMA",
+    " A "
+  ],
+  "key": {
+    "A": "origolds:magigold_core",
+    "M": "minecraft:totem_of_undying"
+  },
+  "result": {
+    "id": "origolds_ar:totem_of_resurrection",
+    "count": 1
+  }
+}

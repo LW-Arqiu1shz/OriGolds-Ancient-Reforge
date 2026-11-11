@@ -1,0 +1,8 @@
+{
+  "pack": {
+    "description": "OriGolds: Ancient Reforge resources",
+    "min_format": 34,
+    "max_format": 101,
+    "supported_formats": [34, 101]
+  }
+}

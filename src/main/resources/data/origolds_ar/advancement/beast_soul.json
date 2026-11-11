@@ -1,0 +1,15 @@
+{
+  "parent": "origolds_ar:swift_as_the_wind",
+  "display": {
+    "icon": { "id": "origolds_ar:beast_rune" },
+    "title": { "translate": "advancements.origolds_ar.beast_soul.title" },
+    "description": { "translate": "advancements.origolds_ar.beast_soul.description" },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "beast_rune": { "trigger": "minecraft:inventory_changed", "conditions": { "items": [ { "items": "origolds_ar:beast_rune" } ] } }
+  }
+}
