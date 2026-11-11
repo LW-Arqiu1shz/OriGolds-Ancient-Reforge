@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    "minecraft:lever",
+    "minecraft:redstone_block",
+    "origolds:magigold_core"
+  ],
+  "result": {
+    "id": "origolds_ar:origold_remote_switch",
+    "count": 1
+  }
+}

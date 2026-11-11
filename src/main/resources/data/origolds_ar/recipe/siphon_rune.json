@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ODO",
+    "DMD",
+    "ODO"
+  ],
+  "key": {
+    "O": "minecraft:obsidian",
+    "D": "minecraft:diamond_block",
+    "M": "origolds:magigold_core"
+  },
+  "result": {
+    "id": "origolds_ar:siphon_rune",
+    "count": 1
+  }
+}

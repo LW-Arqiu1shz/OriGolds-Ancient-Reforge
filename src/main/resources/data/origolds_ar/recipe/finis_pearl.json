@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:ender_pearl",
+    "origolds:magigold_core"
+  ],
+  "result": {"id": "origolds_ar:finis_pearl", "count": 1}
+}

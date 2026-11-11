@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "origolds_ar:specter_medallion",
+    "origolds_ar:assassin_medallion",
+    "origolds_ar:moonwalker_medallion"
+  ],
+  "result": {
+    "id": "origolds_ar:shadow_medallion",
+    "count": 1
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "credit": "OriGolds: Ancient Reforge",
+  "textures": {
+    "gold": "origolds_ar:block/origold_assembly_station_gold",
+    "clamp": "origolds_ar:block/origold_assembly_station_clamp",
+    "ring": "origolds_ar:block/origold_assembly_station_ring",
+    "core": "origolds_ar:block/origold_assembly_station_core",
+    "particle": "origolds_ar:block/origold_assembly_station_gold"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 2, 16],
+      "faces": {
+        "down": {"texture": "#gold"},
+        "up": {"texture": "#gold"},
+        "north": {"texture": "#gold"},
+        "south": {"texture": "#gold"},
+        "west": {"texture": "#gold"},
+        "east": {"texture": "#gold"}
+      }
+    },
+    {
+      "from": [2, 2, 2],
+      "to": [14, 4, 14],
+      "faces": {
+        "up": {"texture": "#ring"},
+        "north": {"texture": "#gold"},
+        "south": {"texture": "#gold"},
+        "west": {"texture": "#gold"},
+        "east": {"texture": "#gold"}
+      }
+    },
+    {
+      "from": [3, 4, 3],
+      "to": [13, 5, 13],
+      "faces": {
+        "up": {"texture": "#core"},
+        "north": {"texture": "#core"},
+        "south": {"texture": "#core"},
+        "west": {"texture": "#core"},
+        "east": {"texture": "#core"}
+      }
+    },
+    {
+      "from": [1, 5, 1],
+      "to": [3, 14, 3],
+      "faces": {
+        "down": {"texture": "#clamp"},
+        "up": {"texture": "#clamp"},
+        "north": {"texture": "#clamp"},
+        "south": {"texture": "#clamp"},
+        "west": {"texture": "#clamp"},
+        "east": {"texture": "#clamp"}
+      }
+    },
+    {
+      "from": [13, 5, 1],
+      "to": [15, 14, 3],
+      "faces": {
+        "down": {"texture": "#clamp"},
+        "up": {"texture": "#clamp"},
+        "north": {"texture": "#clamp"},
+        "south": {"texture": "#clamp"},
+        "west": {"texture": "#clamp"},
+        "east": {"texture": "#clamp"}
+      }
+    },
+    {
+      "from": [1, 5, 13],
+      "to": [3, 14, 15],
+      "faces": {
+        "down": {"texture": "#clamp"},
+        "up": {"texture": "#clamp"},
+        "north": {"texture": "#clamp"},
+        "south": {"texture": "#clamp"},
+        "west": {"texture": "#clamp"},
+        "east": {"texture": "#clamp"}
+      }
+    },
+    {
+      "from": [13, 5, 13],
+      "to": [15, 14, 15],
+      "faces": {
+        "down": {"texture": "#clamp"},
+        "up": {"texture": "#clamp"},
+        "north": {"texture": "#clamp"},
+        "south": {"texture": "#clamp"},
+        "west": {"texture": "#clamp"},
+        "east": {"texture": "#clamp"}
+      }
+    },
+    {
+      "from": [2, 14, 2],
+      "to": [14, 16, 14],
+      "faces": {
+        "down": {"texture": "#clamp"},
+        "up": {"texture": "#gold"},
+        "north": {"texture": "#gold"},
+        "south": {"texture": "#gold"},
+        "west": {"texture": "#gold"},
+        "east": {"texture": "#gold"}
+      }
+    }
+  ]
+}

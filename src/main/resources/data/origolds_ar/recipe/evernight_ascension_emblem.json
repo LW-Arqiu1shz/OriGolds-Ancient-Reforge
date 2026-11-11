@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "origolds_ar:shadow_medallion",
+    "origolds_ar:beast_rune"
+  ],
+  "result": {
+    "id": "origolds_ar:evernight_ascension_emblem",
+    "count": 1
+  }
+}

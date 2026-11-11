@@ -1,0 +1,15 @@
+{
+  "parent": "origolds:origolds/root",
+  "display": {
+    "icon": { "id": "origolds_ar:origold_assembly_station" },
+    "title": { "translate": "advancements.origolds_ar.origold_infuser.title" },
+    "description": { "translate": "advancements.origolds_ar.origold_infuser.description" },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "infuse": { "trigger": "origolds_ar:origold_infusion", "conditions": {} }
+  }
+}

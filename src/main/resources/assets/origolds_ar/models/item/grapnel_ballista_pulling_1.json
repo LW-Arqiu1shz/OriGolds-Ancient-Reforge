@@ -1,0 +1,6 @@
+{
+    "parent": "origolds_ar:item/grapnel_ballista",
+    "textures": {
+        "layer0": "origolds_ar:item/grapnel_ballista_pulling_1"
+    }
+}

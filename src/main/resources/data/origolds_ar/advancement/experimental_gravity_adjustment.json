@@ -1,0 +1,15 @@
+{
+  "parent": "origolds_ar:spectral_sign",
+  "display": {
+    "icon": { "id": "origolds_ar:moonwalker_medallion" },
+    "title": { "translate": "advancements.origolds_ar.experimental_gravity_adjustment.title" },
+    "description": { "translate": "advancements.origolds_ar.experimental_gravity_adjustment.description" },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "moonwalker_medallion": { "trigger": "minecraft:inventory_changed", "conditions": { "items": [ { "items": "origolds_ar:moonwalker_medallion" } ] } }
+  }
+}
