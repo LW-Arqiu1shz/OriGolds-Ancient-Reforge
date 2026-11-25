@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " C ",
+    "OBO",
+    " O "
+  ],
+  "key": {
+    "C": "origolds:magigold_core",
+    "O": "minecraft:obsidian",
+    "B": [
+      "minecraft:bundle",
+      "minecraft:chest",
+      "minecraft:barrel"
+    ]
+  },
+  "result": {
+    "id": "origolds_ar:otherworld_purse",
+    "count": 1
+  }
+}

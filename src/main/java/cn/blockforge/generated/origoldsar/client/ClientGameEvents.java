@@ -56,6 +56,10 @@ public final class ClientGameEvents {
             appendHints(tooltip, "quiver");
         } else if (stack.is(GeneratedMod.FINIS_PEARL.get())) {
             appendHints(tooltip, "finis");
+        } else if (stack.is(GeneratedMod.SELF_CIRCULATING_BOTTLE.get())) {
+            appendHints(tooltip, "bottle");
+        } else if (stack.is(GeneratedMod.OTHERWORLD_PURSE.get())) {
+            appendHints(tooltip, "purse");
         } else if (stack.is(GeneratedMod.TOTEM_OF_RESURRECTION.get())) {
             appendHints(tooltip, "totem");
         } else if (stack.is(GeneratedMod.SHADOW_MEDALLION.get())) {
@@ -88,8 +92,11 @@ public final class ClientGameEvents {
      * in the current client language.
      */
     private static void appendHints(List<Component> tooltip, String key) {
-        tooltip.add(Component.translatable(HINT_PREFIX + key + "_useful")
-                .withStyle(style -> style.withColor(ChatFormatting.AQUA).withItalic(false)));
+        // 实用提示可以用换行符分成多行（提示框不会自己换行）。
+        for (String line : Component.translatable(HINT_PREFIX + key + "_useful").getString().split("\n")) {
+            tooltip.add(Component.literal(line)
+                    .withStyle(style -> style.withColor(ChatFormatting.AQUA).withItalic(false)));
+        }
         tooltip.add(Component.translatable(HINT_PREFIX + key + "_bullshit")
                 .withStyle(style -> style.withColor(ChatFormatting.GRAY).withItalic(true)));
     }

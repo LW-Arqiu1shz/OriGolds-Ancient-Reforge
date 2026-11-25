@@ -15,7 +15,7 @@ public final class AbilityItems {
 
     /** 判断玩家是否在背包（含主手/副手）中持有某符文（含野兽符文与永夜擢升之证的继承）。 */
     public static boolean hasRuneInInventory(Player player, Item rune) {
-        for (ItemStack stack : player.getInventory().getNonEquipmentItems()) {
+        for (ItemStack stack : cn.blockforge.generated.origoldsar.purse.PurseData.withInventory(player)) {
             if (!stack.isEmpty() && hasRuneAbility(stack, rune)) {
                 return true;
             }

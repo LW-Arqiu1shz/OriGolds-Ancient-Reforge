@@ -123,7 +123,7 @@ public final class MoonwalkClient {
     }
 
     private static boolean hasMedallion(LocalPlayer player) {
-        for (ItemStack stack : player.getInventory().getNonEquipmentItems()) {
+        for (ItemStack stack : cn.blockforge.generated.origoldsar.purse.PurseData.withInventory(player)) {
             if (AbilityItems.hasMedallionAbility(stack, GeneratedMod.MOONWALKER_MEDALLION.get())) {
                 return true;
             }

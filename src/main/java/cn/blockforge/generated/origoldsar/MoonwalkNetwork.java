@@ -168,7 +168,7 @@ public final class MoonwalkNetwork {
 
     /** “持有时”按物品栏整体判定：月亮行者勋章本体、暗影勋章、永夜擢升之证均视为持有。 */
     public static boolean hasMoonwalker(Player player) {
-        for (ItemStack stack : player.getInventory().getNonEquipmentItems()) {
+        for (ItemStack stack : cn.blockforge.generated.origoldsar.purse.PurseData.withInventory(player)) {
             if (AbilityItems.hasMedallionAbility(stack, GeneratedMod.MOONWALKER_MEDALLION.get())) {
                 return true;
             }
