@@ -22,6 +22,7 @@ public final class ClientModEvents {
     @SubscribeEvent
     public static void registerMenuScreens(RegisterMenuScreensEvent event) {
         event.register(GeneratedMod.ASSEMBLY_STATION_MENU.get(), AssemblyStationScreen::new);
+        event.register(GeneratedMod.OTHERWORLD_PURSE_MENU.get(), cn.blockforge.generated.origoldsar.client.OtherworldPurseScreen::new);
     }
 
     @SubscribeEvent

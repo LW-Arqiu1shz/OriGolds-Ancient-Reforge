@@ -45,7 +45,7 @@ public final class SpecterDodgeClient {
     }
 
     private static boolean hasMedallion(Player player) {
-        for (ItemStack stack : player.getInventory().items) {
+        for (ItemStack stack : cn.blockforge.generated.origoldsar.purse.PurseData.withInventory(player)) {
             if (AbilityItems.hasMedallionAbility(stack, GeneratedMod.SPECTER_MEDALLION.get())) {
                 return true;
             }

@@ -72,6 +72,12 @@ public final class VoidQuiverEvents {
                 return stack;
             }
         }
+        // 装备着的异界行囊算作物品栏的延伸。
+        for (ItemStack stack : cn.blockforge.generated.origoldsar.purse.PurseData.contents(player)) {
+            if (stack.is(GeneratedMod.VOID_QUIVER.get())) {
+                return stack;
+            }
+        }
         ItemStack offhand = player.getOffhandItem();
         return offhand.is(GeneratedMod.VOID_QUIVER.get()) ? offhand : ItemStack.EMPTY;
     }

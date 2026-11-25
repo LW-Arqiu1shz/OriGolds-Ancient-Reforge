@@ -40,7 +40,7 @@ public final class TotemResurrectionEvents {
 
     /** 该玩家身上（主背包/护甲/副手）是否存在一根未在冷却中的复苏图腾。 */
     private static boolean hasReadyTotemInInventory(Player player) {
-        for (ItemStack stack : player.getInventory().items) {
+        for (ItemStack stack : cn.blockforge.generated.origoldsar.purse.PurseData.withInventory(player)) {
             if (isReadyTotem(stack)) {
                 return true;
             }
@@ -60,7 +60,7 @@ public final class TotemResurrectionEvents {
 
     /** 让该玩家身上（主背包/护甲/副手）的所有复苏图腾一起进入冷却。 */
     private static void putAllTotemsOnCooldown(Player player) {
-        for (ItemStack stack : player.getInventory().items) {
+        for (ItemStack stack : cn.blockforge.generated.origoldsar.purse.PurseData.withInventory(player)) {
             if (TotemOfResurrectionItem.isTotem(stack)) {
                 TotemOfResurrectionItem.startCooldown(stack);
             }

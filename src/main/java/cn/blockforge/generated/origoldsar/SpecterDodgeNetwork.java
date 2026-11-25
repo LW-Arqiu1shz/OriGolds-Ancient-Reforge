@@ -36,7 +36,7 @@ public final class SpecterDodgeNetwork {
     }
 
     private static boolean hasMedallion(net.minecraft.world.entity.player.Player player) {
-        for (var stack : player.getInventory().items) if (AbilityItems.hasMedallionAbility(stack, GeneratedMod.SPECTER_MEDALLION.get())) return true;
+        for (var stack : cn.blockforge.generated.origoldsar.purse.PurseData.withInventory(player)) if (AbilityItems.hasMedallionAbility(stack, GeneratedMod.SPECTER_MEDALLION.get())) return true;
         for (var stack : player.getInventory().armor) if (AbilityItems.hasMedallionAbility(stack, GeneratedMod.SPECTER_MEDALLION.get())) return true;
         return AbilityItems.hasMedallionAbility(player.getOffhandItem(), GeneratedMod.SPECTER_MEDALLION.get());
     }

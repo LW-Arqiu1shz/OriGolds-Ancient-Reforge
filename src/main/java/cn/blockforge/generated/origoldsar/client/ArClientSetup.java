@@ -14,5 +14,7 @@ public final class ArClientSetup {
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
         // NEO 样式的两路无线视觉通道（CLASSIC 样式下它们不产生几何）。
         WirelessConnectorClient.registerVisualChannels();
+        // 物品栏界面上方的异界行囊格子只在物品栏界面里显示。
+        PurseInventoryOverlay.init();
     }
 }

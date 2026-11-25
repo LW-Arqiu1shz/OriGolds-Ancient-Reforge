@@ -8,7 +8,9 @@
     "LunarGravityMixin",
     "DoubleGravityMixin",
     "FallImmunityMixin",
-    "FallSpeedCapMixin"
+    "FallSpeedCapMixin",
+    "MenuInvoker",
+    "InventoryMenuPurseMixin"
   ],
   "client": [
     "client.ModListScreenMixin",

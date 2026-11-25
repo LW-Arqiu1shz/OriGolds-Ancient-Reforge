@@ -5,7 +5,7 @@
   "key": {
     "G": {"item": "minecraft:gold_block"},
     "R": {"item": "minecraft:redstone"},
-    "P": {"item": "minecraft:phantom_membrane"}
+    "P": {"item": "minecraft:gunpowder"}
   },
   "result": {"id": "origolds_ar:assassin_medallion", "count": 1}
 }
