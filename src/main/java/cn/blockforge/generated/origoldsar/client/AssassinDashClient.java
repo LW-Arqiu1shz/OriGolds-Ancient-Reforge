@@ -138,7 +138,7 @@ public final class AssassinDashClient {
 
     /** “持有时”按物品栏整体判定（主手、副手或背包中任意一格）。 */
     private static boolean hasMedallion(LocalPlayer player) {
-        for (ItemStack stack : player.getInventory().getNonEquipmentItems()) {
+        for (ItemStack stack : cn.blockforge.generated.origoldsar.purse.PurseData.withInventory(player)) {
             if (AbilityItems.hasMedallionAbility(stack, GeneratedMod.ASSASSIN_MEDALLION.get())) {
                 return true;
             }

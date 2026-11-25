@@ -9,7 +9,7 @@
   "key": {
     "G": "minecraft:gold_block",
     "R": "minecraft:redstone",
-    "P": "minecraft:phantom_membrane"
+    "P": "minecraft:gunpowder"
   },
   "result": {
     "id": "origolds_ar:assassin_medallion",

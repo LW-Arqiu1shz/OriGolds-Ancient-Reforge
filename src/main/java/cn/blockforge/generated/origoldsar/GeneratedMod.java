@@ -36,6 +36,8 @@ public final class GeneratedMod {
     public static final DeferredRegister.DataComponents DATA_COMPONENTS = DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, MOD_ID);
     public static final DeferredRegister<CriterionTrigger<?>> TRIGGERS = DeferredRegister.create(Registries.TRIGGER_TYPE, MOD_ID);
     public static final DeferredRegister.Entities ENTITY_TYPES = DeferredRegister.createEntities(MOD_ID);
+    public static final DeferredRegister<net.neoforged.neoforge.attachment.AttachmentType<?>> ATTACHMENT_TYPES =
+            DeferredRegister.create(net.neoforged.neoforge.registries.NeoForgeRegistries.Keys.ATTACHMENT_TYPES, MOD_ID);
     public static final DeferredHolder<CriterionTrigger<?>, OrigoldInfusionTrigger> ORIGOLD_INFUSION_TRIGGER =
             TRIGGERS.register("origold_infusion", OrigoldInfusionTrigger::new);
     private static final ResourceKey<?> ORIGOLDS_CREATIVE_TAB = ResourceKey.create(
@@ -75,6 +77,20 @@ public final class GeneratedMod {
     public static final DeferredItem<Item> WIRELESS_CONNECTOR = ITEMS.registerItem("origold_wireless_connector", properties -> new WirelessConnectorItem(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
     /** 金源无线红石遥控开关：左键绑定一个方块，右键远程交互或输出 15 级红石信号。 */
     public static final DeferredItem<Item> ORIGOLD_REMOTE_SWITCH = ITEMS.registerItem("origold_remote_switch", properties -> new RemoteSwitchItem(properties.stacksTo(1).rarity(Rarity.UNCOMMON)));
+    /** 异界行囊：9 格随身储物，可装备到物品栏界面；死亡不掉落。 */
+    public static final DeferredBlock<Block> OTHERWORLD_PURSE_BLOCK = BLOCKS.registerBlock(
+            "otherworld_purse", cn.blockforge.generated.origoldsar.purse.OtherworldPurseBlock::new, cn.blockforge.generated.origoldsar.purse.OtherworldPurseBlock::blockProperties);
+    public static final net.neoforged.neoforge.registries.DeferredHolder<BlockEntityType<?>, BlockEntityType<cn.blockforge.generated.origoldsar.purse.OtherworldPurseBlockEntity>> OTHERWORLD_PURSE_BLOCK_ENTITY =
+            BLOCK_ENTITY_TYPES.register("otherworld_purse", () -> new BlockEntityType<>(
+                    cn.blockforge.generated.origoldsar.purse.OtherworldPurseBlockEntity::new, OTHERWORLD_PURSE_BLOCK.get()));
+    public static final DeferredItem<Item> OTHERWORLD_PURSE = ITEMS.registerItem("otherworld_purse", properties -> new cn.blockforge.generated.origoldsar.purse.OtherworldPurseItem(OTHERWORLD_PURSE_BLOCK.get(), properties.stacksTo(1).fireResistant().rarity(Rarity.RARE)));
+    public static final net.neoforged.neoforge.registries.DeferredHolder<MenuType<?>, MenuType<cn.blockforge.generated.origoldsar.purse.OtherworldPurseMenu>> OTHERWORLD_PURSE_MENU =
+            MENU_TYPES.register("otherworld_purse", () -> IMenuTypeExtension.create((id, inventory, buf) ->
+                    cn.blockforge.generated.origoldsar.purse.OtherworldPurseMenu.fromNetwork(id, inventory, buf)));
+    /** 玩家装备着的异界行囊和里面的物品（死亡后保留）。 */
+    public static final java.util.function.Supplier<net.neoforged.neoforge.attachment.AttachmentType<cn.blockforge.generated.origoldsar.purse.PurseData>> PURSE_DATA =
+            ATTACHMENT_TYPES.register("otherworld_purse", () -> net.neoforged.neoforge.attachment.AttachmentType
+                    .serializable(cn.blockforge.generated.origoldsar.purse.PurseData::new).copyOnDeath().build());
     public static final DeferredHolder<EntityType<?>, EntityType<VolunteerDummy>> VOLUNTEER_DUMMY_TYPE =
             ENTITY_TYPES.registerEntityType("volunteer_dummy", VolunteerDummy::new, MobCategory.MISC,
                     builder -> builder.sized(0.6F, 1.95F)
@@ -168,6 +184,7 @@ public final class GeneratedMod {
         DATA_COMPONENTS.register(modBus);
         TRIGGERS.register(modBus);
         ENTITY_TYPES.register(modBus);
+        ATTACHMENT_TYPES.register(modBus);
         // 26.1.2 的 @EventBusSubscriber 已取消 bus 属性（只订阅游戏总线），
         // 因此 MOD 事件总线上的注册全部在这里显式完成。
         modBus.addListener(GeneratedMod::addItemsToOrigoldsTab);
@@ -179,6 +196,7 @@ public final class GeneratedMod {
         modBus.addListener(GrapnelNetwork::register);
         modBus.addListener(PlayerInfoNetwork::register);
         modBus.addListener(SelfBottleNetwork::register);
+        modBus.addListener(cn.blockforge.generated.origoldsar.purse.PurseNetwork::register);
         // 注意：MoonwalkClient / SpecterDodgeClient / AssassinDashClient 的 tick 监听的是
         // ClientTickEvent.Post，它属于游戏总线事件而非 MOD 总线事件，只能通过类上的
         // @EventBusSubscriber 自动挂到游戏总线；若写在这里会抛
@@ -194,6 +212,8 @@ public final class GeneratedMod {
             // 附属模组（origolds_ia）用 WireVisuals.register 再挂自己的通道即可，不必改这里。
             modBus.addListener(cn.blockforge.generated.origoldsar.api.visual.WireVisuals::registerPipelines);
             cn.blockforge.generated.origoldsar.client.WirelessConnectorClient.registerVisualChannels();
+            // 物品栏界面上方的异界行囊格子只在物品栏界面里显示。
+            cn.blockforge.generated.origoldsar.client.PurseInventoryOverlay.init();
             // 模组列表双语名称：26.3 用官方的 ModDisplayInfo 扩展点（见 ArModDisplayInfo）。
             container.registerExtensionPoint(net.neoforged.neoforge.client.gui.modlist.ModDisplayInfo.class,
                     new cn.blockforge.generated.origoldsar.client.ArModDisplayInfo(container));
@@ -252,6 +272,7 @@ public final class GeneratedMod {
             event.accept(ORIGOLD_ASSEMBLY_STATION_ITEM.get());
             event.accept(WIRELESS_CONNECTOR.get());
             event.accept(ORIGOLD_REMOTE_SWITCH.get());
+            event.accept(OTHERWORLD_PURSE.get());
         }
     }
 }

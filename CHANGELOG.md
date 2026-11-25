@@ -1,5 +1,21 @@
 # 更新日志 / Changelog
 
+## 1.3.0
+
+- 加入异界行囊：9 格随身储物，可以装备到物品栏界面上；行囊和里面的物品死亡时都不会掉落
+- 装备着的异界行囊算作物品栏的一部分：里面的勋章、符文、复苏图腾、虚空箭袋都照常生效
+- 异界行囊可以 Shift+右键放在地上，右键打开；放在地上的行囊不怕爆炸，空手就能挖起来
+- 刺客勋章的合成配方改为使用火药（替换原来的幻翼膜）
+- 补上自循环附魔之瓶的物品提示
+
+---
+
+- Added the Otherworld Purse: 9 slots of portable storage that can be equipped to the inventory screen; the purse and its contents are kept on death
+- An equipped Otherworld Purse counts as part of your inventory: medallions, runes, Totems of Resurrection and the Void Quiver inside it all work
+- The Otherworld Purse can be placed with Shift+right-click and opened with right-click; a placed purse is blast-proof and can be picked up by hand
+- The Assassin Medallion recipe now uses gunpowder instead of a phantom membrane
+- Added the missing tooltip for the Self-Circulating Bottle o' Enchanting
+
 ## 1.2.2
 
 - 优化模组性能表现和双语适配
